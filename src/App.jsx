@@ -11,6 +11,7 @@ function App() {
       <h1 className="text-3xl font-bold underline text-blue-500">
         Hello Tailwind!
       </h1>
+      <h2 className=''>TEST</h2>
     </div>
   )
 }
