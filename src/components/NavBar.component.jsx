@@ -16,7 +16,7 @@ const NavBar = () => {
     }, [])
 
     return(
-        <nav className={`h-[10vh] flex fixed top-2 backdrop-blur-md z-10 transition-all duration-900 ${scrolled?"w-[50%] top-2 rounded-full bg-gray-500/50 ":"w-[90vw] top-0 bg-transparent rounded-lg border-0  "} `}>
+        <nav className={`flex fixed top-2 backdrop-blur-md z-20 transition-all duration-900 ${scrolled?"w-[50%] top-5 rounded-full bg-gray-500/50 h-[8vh] ":"w-[90vw] top-0 bg-transparent rounded-lg border-0 h-[15vh]"} `}>
             <div className=" w-[50%] flex"></div>
             <div className='flex m-auto w-[50%] justify-evenly'>
                 <NavText to={"/"} text={"Home"} />
