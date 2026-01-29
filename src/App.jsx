@@ -10,7 +10,8 @@ import NameAnimation from "./components/NameAnimation.component.jsx";
 function App() {
   return (
       <ThemeProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio-website">
+
           <div className='w-full flex flex-col justify-center items-center'>
             <NavBar />
             <Routes>
