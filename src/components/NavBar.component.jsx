@@ -50,11 +50,10 @@ const NavBar = () => {
 
     return (
         <nav
-            className={`flex fixed z-50 transition-all duration-500 ${
-                scrolled
+            className={`flex fixed z-50 transition-all duration-500 ${scrolled
                     ? "w-[90%] sm:w-[70%] md:w-[50%] top-5 rounded-full h-[8vh] shadow-lg"
-                    : "w-[95%] sm:w-[100vw] top-0 h-[12vh] sm:h-[15vh]"
-            }`}
+                    : "w-[95%] sm:w-[90vw] top-0 rounded-lg h-[12vh] sm:h-[15vh]"
+                }`}
             style={{
                 backgroundColor: scrolled
                     ? `${colors.bg.secondary}dd`
@@ -77,6 +76,7 @@ const NavBar = () => {
 
             <div className="flex m-auto w-[50%] justify-end gap-3 sm:gap-5 mr-4 sm:mr-5 items-center">
                 <NavText to="/" text="Home" />
+                <NavText to="/portfolio" text="Portfolio" />
                 <NavText to="/about" text="About" />
                 <NavText to="/contact" text="Contact" />
 

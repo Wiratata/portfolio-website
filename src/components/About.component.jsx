@@ -425,7 +425,7 @@ const About = () => {
                         Whether you need motion graphics that captivate or web experiences that convert, I bring both worlds together.
                     </p>
                     <a
-                        href="/contact"
+                        href="/portfolio-website/contact"
                         className="inline-block px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105"
                         style={{
                             backgroundColor: colors.accent.primary,
