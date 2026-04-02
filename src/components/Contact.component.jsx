@@ -97,7 +97,7 @@ const Contact = () => {
             style={{ backgroundColor: colors.bg.primary }}
         >
             <div className="max-w-6xl mx-auto relative z-10">
-                {/* Hero Section */}
+
                 <div className="text-center mb-16">
                     <h1
                         className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 transition-colors duration-500"
@@ -114,7 +114,7 @@ const Contact = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Contact Form */}
+
                     <div
                         className="rounded-2xl p-8 transition-colors duration-500"
                         style={{
@@ -150,7 +150,7 @@ const Contact = () => {
                         )}
 
                         <div className="space-y-6">
-                            {/* Project Type */}
+
                             <div>
                                 <label
                                     className="block font-semibold mb-2 transition-colors duration-500"
@@ -178,7 +178,7 @@ const Contact = () => {
                                 </select>
                             </div>
 
-                            {/* Name */}
+
                             <div>
                                 <label
                                     className="block font-semibold mb-2 transition-colors duration-500"
@@ -202,7 +202,7 @@ const Contact = () => {
                                 />
                             </div>
 
-                            {/* Email */}
+
                             <div>
                                 <label
                                     className="block font-semibold mb-2 transition-colors duration-500"
@@ -226,7 +226,7 @@ const Contact = () => {
                                 />
                             </div>
 
-                            {/* Subject */}
+
                             <div>
                                 <label
                                     className="block font-semibold mb-2 transition-colors duration-500"
@@ -250,7 +250,7 @@ const Contact = () => {
                                 />
                             </div>
 
-                            {/* Message */}
+
                             <div>
                                 <label
                                     className="block font-semibold mb-2 transition-colors duration-500"
@@ -274,7 +274,7 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
-                            {/* Submit Button */}
+
                             <button
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
@@ -299,9 +299,9 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Contact Info & Additional Details */}
+
                     <div className="space-y-8">
-                        {/* Contact Methods */}
+
                         <div
                             className="rounded-2xl p-8 transition-colors duration-500"
                             style={{
@@ -366,7 +366,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* Availability & Response Time */}
+
                         <div
                             className="rounded-2xl p-8 transition-colors duration-500"
                             style={{
@@ -430,7 +430,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* What to Expect */}
+
                         <div
                             className="rounded-2xl p-8 transition-colors duration-500"
                             style={{

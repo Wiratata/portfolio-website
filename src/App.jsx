@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import NavBar from './components/NavBar.component';

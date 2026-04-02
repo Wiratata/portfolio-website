@@ -109,7 +109,7 @@ const About = () => {
             style={{ backgroundColor: colors.bg.primary }}
         >
             <div className="max-w-6xl mx-auto relative z-10">
-                {/* Hero Section */}
+
                 <div className="text-center mb-16">
                     <h1
                         className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 transition-colors duration-500"
@@ -125,7 +125,7 @@ const About = () => {
                     </p>
                 </div>
 
-                {/* Tab Navigation */}
+
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {['story', 'experience', 'projects', 'education'].map((tab) => (
                         <button
@@ -144,7 +144,7 @@ const About = () => {
                     ))}
                 </div>
 
-                {/* Content Sections */}
+
                 <div
                     className="rounded-2xl p-8 sm:p-12 transition-colors duration-500"
                     style={{
@@ -153,7 +153,7 @@ const About = () => {
                         borderColor: colors.border.light
                     }}
                 >
-                    {/* My Story Tab */}
+
                     {activeTab === 'story' && (
                         <div className="space-y-8 animate-fadeIn">
                             <div>
@@ -256,7 +256,7 @@ const About = () => {
                         </div>
                     )}
 
-                    {/* Experience Tab */}
+
                     {activeTab === 'experience' && (
                         <div className="space-y-6 animate-fadeIn">
                             <h2
@@ -298,7 +298,7 @@ const About = () => {
                         </div>
                     )}
 
-                    {/* Projects Tab */}
+
                     {activeTab === 'projects' && (
                         <div className="space-y-6 animate-fadeIn">
                             <h2
@@ -357,7 +357,7 @@ const About = () => {
                         </div>
                     )}
 
-                    {/* Education Tab */}
+
                     {activeTab === 'education' && (
                         <div className="space-y-6 animate-fadeIn">
                             <h2
@@ -403,7 +403,7 @@ const About = () => {
                     )}
                 </div>
 
-                {/* CTA Section */}
+
                 <div
                     className="mt-12 text-center rounded-2xl p-8 sm:p-12 transition-colors duration-500"
                     style={{
