@@ -4,8 +4,8 @@ import { useTheme } from '../context/ThemeContext';
 
 const Portfolio = () => {
     const [activeTab, setActiveTab] = useState('motion');
+    const [selectedVideo, setSelectedVideo] = useState(null);
     const { colors } = useTheme();
-
 
     const { repos, loading, error } = useGitHubRepos('wiratata');
 
@@ -15,37 +15,169 @@ const Portfolio = () => {
     const motionProjects = [
         {
             id: 1,
-            title: "Neon City",
-            category: "3D Animation",
-            tools: "Cinema 4D • Octane",
-            video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            title: "Wiranata Showreel",
+            category: "Motion Graphics",
+            tools: "After Effects • Illustrator • Photoshop • Premiere Pro",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/yWsctG4H5Ss/maxresdefault.jpg",
+            link: "https://youtu.be/yWsctG4H5Ss?si=78pbnGQcScFUj3Qe",
+            embedUrl: "https://www.youtube.com/embed/yWsctG4H5Ss?autoplay=1"
         },
         {
             id: 2,
-            title: "Abstract Flow",
-            category: "Motion Design",
-            tools: "After Effects",
-            video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            title: "Daily Motion Graphics Challenges Compilation",
+            category: "Motion Graphics Compilation",
+            tools: "After Effects • Motion Design",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/INbnKnDRZFI/maxresdefault.jpg",
+            link: "https://youtu.be/INbnKnDRZFI",
+            embedUrl: "https://www.youtube.com/embed/INbnKnDRZFI?autoplay=1"
         },
         {
             id: 3,
-            title: "Product Reveal",
-            category: "Commercial",
-            tools: "Blender • DaVinci",
-            video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+            title: "Pln Identifikasi Bahaya Video",
+            category: "Safety Explainer",
+            tools: "After Effects • 2D Animation",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/RHLW57KnWrU/maxresdefault.jpg",
+            link: "https://youtu.be/RHLW57KnWrU",
+            embedUrl: "https://www.youtube.com/embed/RHLW57KnWrU?autoplay=1"
         },
         {
             id: 4,
-            title: "Logo Animation",
-            category: "Branding",
-            tools: "After Effects",
-            video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+            title: "Pln Pengendalian Resiko Video",
+            category: "Safety Explainer",
+            tools: "After Effects • Motion Graphics",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/-y_8YlLu1TM/maxresdefault.jpg",
+            link: "https://youtu.be/-y_8YlLu1TM",
+            embedUrl: "https://www.youtube.com/embed/-y_8YlLu1TM?autoplay=1"
+        },
+        {
+            id: 5,
+            title: "PLN Gamification ETD REC",
+            category: "Gamification / Animation",
+            tools: "After Effects • Illustrator",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/1tM4KM5Y93Q/maxresdefault.jpg",
+            link: "https://youtu.be/1tM4KM5Y93Q",
+            embedUrl: "https://www.youtube.com/embed/1tM4KM5Y93Q?autoplay=1"
+        },
+        {
+            id: 6,
+            title: "PLN THE NEW NORMAL",
+            category: "Motion Graphics",
+            tools: "After Effects • Corporate",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/IzCY_UNVUfA/maxresdefault.jpg",
+            link: "https://youtu.be/IzCY_UNVUfA",
+            embedUrl: "https://www.youtube.com/embed/IzCY_UNVUfA?autoplay=1"
+        },
+        {
+            id: 7,
+            title: "PLN SOLID",
+            category: "Corporate Animation",
+            tools: "After Effects • Branding",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/uw9DfWJ-0oA/maxresdefault.jpg",
+            link: "https://youtu.be/uw9DfWJ-0oA",
+            embedUrl: "https://www.youtube.com/embed/uw9DfWJ-0oA?autoplay=1"
+        },
+        {
+            id: 8,
+            title: "PLN Kompor Induksi",
+            category: "Product Explainer",
+            tools: "After Effects • 3D Elements",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/4jXd1qmrVN8/maxresdefault.jpg",
+            link: "https://youtu.be/4jXd1qmrVN8",
+            embedUrl: "https://www.youtube.com/embed/4jXd1qmrVN8?autoplay=1"
+        },
+        {
+            id: 9,
+            title: "PLN EAC COVID 19",
+            category: "Public Service Announcement",
+            tools: "After Effects • Motion Graphics",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/taBVY-iEHVs/maxresdefault.jpg",
+            link: "https://youtu.be/taBVY-iEHVs",
+            embedUrl: "https://www.youtube.com/embed/taBVY-iEHVs?autoplay=1"
+        },
+        {
+            id: 10,
+            title: "PLN Daring Induction",
+            category: "Training / Induction",
+            tools: "After Effects • Explainer",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/FmcnMk1m4Rc/maxresdefault.jpg",
+            link: "https://youtu.be/FmcnMk1m4Rc",
+            embedUrl: "https://www.youtube.com/embed/FmcnMk1m4Rc?autoplay=1"
+        },
+        {
+            id: 11,
+            title: "How to donate",
+            category: "Tutorial Animation",
+            tools: "After Effects • 2D Animation",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/Shjl8XF9doM/maxresdefault.jpg",
+            link: "https://youtu.be/Shjl8XF9doM",
+            embedUrl: "https://www.youtube.com/embed/Shjl8XF9doM?autoplay=1"
+        },
+        {
+            id: 12,
+            title: "EveryYay Jenius promo video",
+            category: "Promo Video",
+            tools: "After Effects • Premiere Pro",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/_l_pQ6q6s8k/maxresdefault.jpg",
+            link: "https://youtu.be/_l_pQ6q6s8k",
+            embedUrl: "https://www.youtube.com/embed/_l_pQ6q6s8k?autoplay=1"
+        },
+        {
+            id: 13,
+            title: "Elevenia Master File",
+            category: "Commercial Animation",
+            tools: "After Effects • E-commerce",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/rpw84PXkAcM/maxresdefault.jpg",
+            link: "https://youtu.be/rpw84PXkAcM",
+            embedUrl: "https://www.youtube.com/embed/rpw84PXkAcM?autoplay=1"
+        },
+        {
+            id: 14,
+            title: "Edu Summit Bumper",
+            category: "Bumper / Animation",
+            tools: "After Effects • Events",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/Xf_MDnIehjM/maxresdefault.jpg",
+            link: "https://youtu.be/Xf_MDnIehjM",
+            embedUrl: "https://www.youtube.com/embed/Xf_MDnIehjM?autoplay=1"
+        },
+        {
+            id: 15,
+            title: "Cap Gajah Video",
+            category: "Product Showcase",
+            tools: "After Effects • 3D",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/spV-A6zlUJc/maxresdefault.jpg",
+            link: "https://youtu.be/spV-A6zlUJc",
+            embedUrl: "https://www.youtube.com/embed/spV-A6zlUJc?autoplay=1"
+        },
+        {
+            id: 16,
+            title: "Telkomtelstra Sdwan",
+            category: "Tech Explainer",
+            tools: "After Effects • Network Graphics",
+            video: null,
+            thumbnail: "https://img.youtube.com/vi/9rP6SHX7oAc/maxresdefault.jpg",
+            link: "https://youtu.be/9rP6SHX7oAc",
+            embedUrl: "https://www.youtube.com/embed/9rP6SHX7oAc?autoplay=1"
         }
     ];
 
     return (
         <div
-            className="min-h-screen w-full pt-28 pb-20 px-4 sm:px-8 transition-colors duration-500"
+            className="min-h-screen w-full pt-[20vh] pb-20 px-4 sm:px-8 transition-colors duration-500"
             style={{ backgroundColor: colors.bg.primary }}
         >
             <div className="max-w-7xl mx-auto">
@@ -107,7 +239,8 @@ const Portfolio = () => {
                     {activeTab === 'motion' && motionProjects.map((project) => (
                         <div
                             key={project.id}
-                            className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:scale-[1.01]"
+                            onClick={() => setSelectedVideo(project)}
+                            className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:scale-[1.01] block cursor-pointer"
                             style={{
                                 backgroundColor: colors.bg.secondary,
                                 border: `1px solid ${colors.border.light}`,
@@ -115,20 +248,38 @@ const Portfolio = () => {
                             }}
                         >
                             <div className="aspect-video w-full relative bg-black/5">
-                                <video
-                                    src={project.video}
-                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                                    muted
-                                    loop
-                                    playsInline
-                                    onMouseOver={e => e.target.play()}
-                                    onMouseOut={e => {
-                                        e.target.pause();
-                                        e.target.currentTime = 0;
-                                    }}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                                <div className="absolute bottom-4 left-4 right-4 text-white">
+                                {project.video ? (
+                                    <video
+                                        src={project.video}
+                                        poster={project.thumbnail}
+                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                        muted
+                                        loop
+                                        playsInline
+                                        onMouseOver={e => e.target.play().catch(() => {})}
+                                        onMouseOut={e => {
+                                            e.target.pause();
+                                            e.target.currentTime = 0;
+                                        }}
+                                    />
+                                ) : (
+                                    <img 
+                                        src={project.thumbnail} 
+                                        alt={project.title}
+                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                    />
+                                )}
+                                
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                    <div className="w-16 h-16 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center border border-white/20 text-white shadow-xl">
+                                        <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none z-0" />
+                                <div className="absolute bottom-4 left-4 right-4 text-white z-10">
                                     <h3 className="text-xl font-bold">{project.title}</h3>
                                     <p className="text-sm opacity-80">{project.category} • {project.tools}</p>
                                 </div>
@@ -253,6 +404,46 @@ const Portfolio = () => {
                     )}
                 </div>
             </div>
+
+            {/* Video Modal Overlay */}
+            {selectedVideo && (
+                <div 
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/90 backdrop-blur-sm transition-opacity duration-300"
+                    onClick={() => setSelectedVideo(null)}
+                >
+                    <div 
+                        className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl animate-fade-in"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Close button */}
+                        <button 
+                            className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+                            onClick={() => setSelectedVideo(null)}
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        {/* Video Player */}
+                        {selectedVideo.video ? (
+                            <video 
+                                src={selectedVideo.video} 
+                                className="w-full h-full object-contain"
+                                controls 
+                                autoPlay 
+                            />
+                        ) : selectedVideo.embedUrl ? (
+                            <iframe 
+                                src={selectedVideo.embedUrl} 
+                                className="w-full h-full border-0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        ) : null}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

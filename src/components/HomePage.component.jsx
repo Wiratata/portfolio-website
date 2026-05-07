@@ -96,7 +96,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <div className="relative min-h-[250vh]">
 
         <div
@@ -347,7 +347,7 @@ const Home = () => {
       {/* --- SHOWREEL SECTION --- */}
       <div
         ref={showreelSectionRef}
-        className="relative z-20 w-full h-screen mt-[10vh] overflow-hidden flex items-center justify-center bg-black group"
+        className="relative z-20 w-full aspect-video mt-[10vh] bg-black group"
         onMouseEnter={() => {
           if (iframeRef.current) {
             iframeRef.current.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
@@ -363,11 +363,10 @@ const Home = () => {
       >
         <iframe
           ref={iframeRef}
-          className="w-full h-full object-cover pointer-events-none scale-[1.3] md:scale-100 transition-opacity duration-500"
+          className="absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-500"
           src={`https://www.youtube.com/embed/yWsctG4H5Ss?autoplay=1&mute=1&controls=0&loop=1&playlist=yWsctG4H5Ss&playsinline=1&rel=0&enablejsapi=1&iv_load_policy=3`}
           title="Showreel"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          style={{ pointerEvents: 'none' }}
         />
 
 
@@ -454,7 +453,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 mb-16">
           <Link
             to="/portfolio"
             className="inline-block px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105"
@@ -466,15 +465,10 @@ const Home = () => {
             View Full Portfolio
           </Link>
         </div>
-      </div>
 
-
-      <div
-        className="w-screen py-10 px-4 sm:px-8 relative z-30 transition-colors duration-500"
-        style={{ backgroundColor: colors.bg.primary }}
-      >
+        {/* CTA Banner perfectly constrained inside Developer Journey */}
         <div
-          className="max-w-7xl mx-auto text-center rounded-2xl p-8 sm:p-12 transition-colors duration-500"
+          className="w-[90%] max-w-4xl mx-auto text-center rounded-2xl p-6 sm:p-12 transition-colors duration-500 shadow-xl"
           style={{
             backgroundColor: colors.bg.secondary,
             borderWidth: '1px',
@@ -482,41 +476,27 @@ const Home = () => {
           }}
         >
           <h3
-            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 transition-colors duration-500"
+            className="text-2xl sm:text-3xl font-bold mb-4 transition-colors duration-500"
             style={{ color: colors.text.primary }}
           >
-            Let's Create Something Amazing
+            Let's Create Something Together
           </h3>
           <p
-            className="text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto transition-colors duration-500"
+            className="text-base sm:text-lg mb-8 max-w-2xl mx-auto transition-colors duration-500"
             style={{ color: colors.text.secondary }}
           >
-            Whether it's a stunning animation or a seamless web experience, I'm ready to bring your vision to life
+            Whether you need motion graphics that captivate or web experiences that convert, I bring both worlds together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold transition-all duration-200 text-base sm:text-lg hover:scale-105"
-              style={{
-                backgroundColor: colors.accent.primary,
-                color: colors.bg.primary
-              }}
-            >
-              Get in Touch
-            </a>
-            <a
-              href="/about"
-              className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold transition-all duration-200 text-base sm:text-lg hover:scale-105"
-              style={{
-                backgroundColor: 'transparent',
-                borderWidth: '2px',
-                borderColor: colors.accent.primary,
-                color: colors.accent.primary
-              }}
-            >
-              Learn More About Me
-            </a>
-          </div>
+          <a
+            href="/portfolio-website/contact"
+            className="inline-block px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 shrink-0"
+            style={{
+              backgroundColor: colors.accent.primary,
+              color: colors.bg.primary
+            }}
+          >
+            Get in Touch
+          </a>
         </div>
       </div>
 
