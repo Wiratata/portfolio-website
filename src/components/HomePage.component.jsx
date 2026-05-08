@@ -265,7 +265,7 @@ const Home = () => {
               </h3>
 
               <div className="flex-1 space-y-2 md:space-y-3">
-                {['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Three.js', 'Framer Motion'].map((skill, i) => (
+                {['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS', 'Framer Motion'].map((skill, i) => (
                   <div
                     key={i}
                     className={`text-xs md:text-sm lg:text-base flex items-center gap-2 transition-colors duration-500 ${i >= 4 ? 'hidden md:flex' : 'flex'}`}
@@ -320,7 +320,7 @@ const Home = () => {
               </h3>
 
               <div className="flex-1 space-y-2 md:space-y-3">
-                {['Node.js', 'MongoDB', 'Git/GitHub', 'Figma', 'C# / C++', 'REST APIs'].map((skill, i) => (
+                {['Node.js', 'MongoDB', 'Git/GitHub', 'Figma', 'C# / C++', 'REST APIs', 'SQL'].map((skill, i) => (
                   <div
                     key={i}
                     className={`text-xs md:text-sm lg:text-base flex items-center gap-2 transition-colors duration-500 ${i >= 4 ? 'hidden md:flex' : 'flex'}`}
@@ -487,8 +487,8 @@ const Home = () => {
           >
             Whether you need motion graphics that captivate or web experiences that convert, I bring both worlds together.
           </p>
-          <a
-            href="/portfolio-website/contact"
+          <Link
+            to="/contact"
             className="inline-block px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 shrink-0"
             style={{
               backgroundColor: colors.accent.primary,
@@ -496,7 +496,7 @@ const Home = () => {
             }}
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </div>
 

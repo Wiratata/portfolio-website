@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import NavBar from './components/NavBar.component';
 import Home from './components/HomePage.component';
@@ -11,7 +11,7 @@ import Portfolio from "./components/Portfolio.component.jsx";
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/portfolio-website">
+      <HashRouter>
 
         <div className='w-full flex flex-col justify-center items-center'>
           <NavBar />
@@ -23,7 +23,7 @@ function App() {
           </Routes>
           <NameAnimation />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
