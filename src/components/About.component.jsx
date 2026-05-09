@@ -77,32 +77,7 @@ const About = () => {
         }
     ];
 
-    const projects = [
-        {
-            name: "Shared Workspace Web App",
-            year: "2025",
-            tech: ["Node.js", "MongoDB", "Express", "REST API", "Render"],
-            description: "Full-stack coworking space platform with property management, search/filter functionality, and MongoDB integration. Deployed on Render.com.",
-            link: "https://github.com/Wiratata",
-            type: "dev"
-        },
-        {
-            name: "Connect Four Game",
-            year: "2025",
-            tech: ["C#", "OOP", "Console App"],
-            description: "Classic Connect Four game built with C#, implementing object-oriented principles, win detection logic, and player validation.",
-            link: "https://github.com/Wiratata",
-            type: "dev"
-        },
-        {
-            name: "Personal Portfolio Website",
-            year: "2025",
-            tech: ["React", "Tailwind CSS", "JavaScript", "Vite"],
-            description: "Responsive portfolio site showcasing dual expertise in motion graphics and frontend development with smooth animations.",
-            link: "https://wiratata.github.io",
-            type: "dev"
-        }
-    ];
+
 
     return (
         <div
@@ -128,7 +103,7 @@ const About = () => {
 
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
-                    {['story', 'experience', 'projects', 'education'].map((tab) => (
+                    {['story', 'experience', 'education'].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
@@ -300,63 +275,7 @@ const About = () => {
                     )}
 
 
-                    {activeTab === 'projects' && (
-                        <div className="space-y-6 animate-fadeIn">
-                            <h2
-                                className="text-3xl font-bold mb-6 transition-colors duration-500"
-                                style={{ color: colors.accent.primary }}
-                            >
-                                Featured Development Projects
-                            </h2>
-                            {projects.map((project, index) => (
-                                <div
-                                    key={index}
-                                    className="p-6 rounded-xl hover:scale-[1.01] transition-all duration-300"
-                                    style={{
-                                        backgroundColor: colors.bg.tertiary,
-                                        borderWidth: '1px',
-                                        borderColor: colors.border.light
-                                    }}
-                                >
-                                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                                        <div>
-                                            <h3 className="text-xl font-bold mb-2 transition-colors duration-500" style={{ color: colors.text.primary }}>{project.name}</h3>
-                                            <div className="flex flex-wrap gap-2">
-                                                {project.tech.map((tech, i) => (
-                                                    <span
-                                                        key={i}
-                                                        className="px-3 py-1 rounded-full text-sm transition-colors duration-500"
-                                                        style={{
-                                                            backgroundColor: `${colors.accent.primary}20`,
-                                                            color: colors.text.primary,
-                                                            borderWidth: '1px',
-                                                            borderColor: `${colors.accent.primary}40`
-                                                        }}
-                                                    >
-                            {tech}
-                          </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                        <span className="text-sm transition-colors duration-500" style={{ color: colors.text.tertiary }}>{project.year}</span>
-                                    </div>
-                                    <p className="mb-4 transition-colors duration-500" style={{ color: colors.text.secondary }}>{project.description}</p>
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 transition-colors duration-300 hover:opacity-80"
-                                        style={{ color: colors.accent.primary }}
-                                    >
-                                        <span>View Project</span>
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            ))}
-                        </div>
-                    )}
+
 
 
                     {activeTab === 'education' && (

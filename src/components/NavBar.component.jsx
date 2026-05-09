@@ -66,10 +66,13 @@ const NavBar = () => {
             <div className="w-[50%] flex items-center pl-4 sm:pl-6">
                 <Link
                     to="/"
-                    className="font-bold text-lg sm:text-xl transition-colors hover:opacity-80"
-                    style={{ color: colors.accent.primary }}
+                    className="transition-transform hover:scale-110"
                 >
-                    W
+                    <img 
+                        src={`${import.meta.env.BASE_URL}Cartoon Character.png`} 
+                        alt="Logo" 
+                        className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                    />
                 </Link>
             </div>
 

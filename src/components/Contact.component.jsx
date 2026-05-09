@@ -21,22 +21,43 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
+        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            setSubmitStatus('error');
+            setTimeout(() => setSubmitStatus(null), 5000);
+            return;
+        }
+
         setIsSubmitting(true);
 
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus('success');
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: '',
-                projectType: 'general'
+        try {
+            const response = await fetch('https://formspree.io/f/xgodnnyk', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
             });
 
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                    projectType: 'general'
+                });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
             setTimeout(() => setSubmitStatus(null), 5000);
-        }, 1500);
+        }
     };
 
     const contactMethods = [
@@ -50,16 +71,7 @@ const Contact = () => {
             value: "wiranata.glitch@gmail.com",
             link: "mailto:wiranata.glitch@gmail.com"
         },
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-            ),
-            label: "Phone",
-            value: "+1 (825) 488-3659",
-            link: "tel:+18254883659"
-        },
+
         {
             icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,6 +157,25 @@ const Contact = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     <span>Message sent successfully! I'll get back to you soon.</span>
+                                </div>
+                            </div>
+                        )}
+
+                        {submitStatus === 'error' && (
+                            <div
+                                className="mb-6 p-4 rounded-lg transition-colors duration-500"
+                                style={{
+                                    backgroundColor: `rgba(239, 68, 68, 0.1)`,
+                                    borderWidth: '1px',
+                                    borderColor: `rgba(239, 68, 68, 0.3)`,
+                                    color: '#ef4444'
+                                }}
+                            >
+                                <div className="flex items-center gap-2">
+                                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Failed to send message. Please ensure all fields are filled out.</span>
                                 </div>
                             </div>
                         )}
