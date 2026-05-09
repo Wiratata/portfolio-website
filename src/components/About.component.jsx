@@ -144,22 +144,16 @@ const About = () => {
                                     style={{ color: colors.text.secondary }}
                                 >
                                     <p>
-                                        I've spent over a decade bringing ideas to life through motion—crafting animations that tell stories,
-                                        build brands, and captivate audiences. From founding <span className="font-semibold" style={{ color: colors.accent.primary }}>Sphoe Studio</span> to
-                                        working with clients around the world, I've learned that great design isn't just about making things look good—it's
-                                        about making them <span className="font-semibold" style={{ color: colors.accent.secondary }}>feel right</span>.
+                                        I’ve been working in motion graphics and video editing for more than 10 years. Most of my experience comes from creating animations, promotional videos, and branded content for different clients and industries. Over the years, I’ve worked with people from different parts of the world through freelance projects and also built my own small studio, <span className="font-semibold" style={{ color: colors.accent.primary }}>Sphoe Studio</span>.
                                     </p>
                                     <p>
-                                        But as I created more complex interactive animations, I realized I wanted to go deeper. I didn't just want to
-                                        design the experience—I wanted to <span className="font-semibold" style={{ color: colors.accent.primary }}>build it</span>. So I made a bold move:
-                                        I relocated to Calgary and enrolled at <span className="font-semibold" style={{ color: colors.accent.secondary }}>Bow Valley College</span> to
-                                        study Software Development.
+                                        What I enjoy most about motion design is bringing ideas to life and finding ways to make visuals feel more engaging and meaningful. For me, good design is not just about making things look nice, but also about making people feel connected to the story.
                                     </p>
                                     <p>
-                                        Now I'm not choosing between design and development—I'm combining them. I bring a designer's eye for
-                                        aesthetics with a developer's understanding of performance, scalability, and user experience. Whether it's
-                                        crafting silky-smooth animations in After Effects or building responsive web applications with React and Node.js,
-                                        I approach every project with the same goal: <span className="font-semibold" style={{ color: colors.accent.primary }}>create something that works beautifully</span>.
+                                        As I kept working on more digital and interactive projects, I became more interested in the technical side behind it. I didn’t just want to animate interfaces or experiences anymore, I wanted to understand how to build them too. That’s one of the reasons why I moved to Calgary and started studying <span className="font-semibold" style={{ color: colors.accent.secondary }}>Software Development at Bow Valley College</span>.
+                                    </p>
+                                    <p>
+                                        Right now, I’m continuing to grow both as a motion designer and developer. I still love working in After Effects and editing videos, but I also enjoy building websites and learning technologies like React and Node.js. I like being able to understand both the creative and technical side of a project, and I’m always looking for ways to improve and learn something new.
                                     </p>
                                 </div>
                             </div>

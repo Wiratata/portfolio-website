@@ -320,7 +320,7 @@ const Home = () => {
               </h3>
 
               <div className="flex-1 space-y-2 md:space-y-3">
-                {['Node.js', 'MongoDB', 'Git/GitHub', 'Figma', 'C# / C++', 'REST APIs', 'SQL'].map((skill, i) => (
+                {['Node.js', 'MongoDB', 'Git/GitHub', 'C# / C++', 'REST APIs', 'SQL'].map((skill, i) => (
                   <div
                     key={i}
                     className={`text-xs md:text-sm lg:text-base flex items-center gap-2 transition-colors duration-500 ${i >= 4 ? 'hidden md:flex' : 'flex'}`}

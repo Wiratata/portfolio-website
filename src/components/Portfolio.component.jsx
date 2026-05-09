@@ -267,6 +267,11 @@ const Portfolio = () => {
                                         src={project.thumbnail} 
                                         alt={project.title}
                                         className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                        onError={(e) => {
+                                            if (e.target.src.includes('maxresdefault.jpg')) {
+                                                e.target.src = e.target.src.replace('maxresdefault.jpg', 'hqdefault.jpg');
+                                            }
+                                        }}
                                     />
                                 )}
                                 
