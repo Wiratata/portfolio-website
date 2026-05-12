@@ -29,7 +29,7 @@ const NameAnimation = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative flex justify-center items-center w-full pt-4 sm:pt-8 pb-0 overflow-hidden transition-colors duration-500"
+            className="relative flex justify-center items-center w-full pt-0 sm:pt-0 pb-0 overflow-hidden transition-colors duration-500"
             style={{
                 backgroundColor: colors.bg.secondary
             }}
@@ -40,7 +40,7 @@ const NameAnimation = () => {
                     className="inline-block transition-all z-14 duration-700 ease-out"
                     style={{
                         color: colors.bg.secondary,
-                        transform: visible ? "translateY(0)" : "translateY(40vh)",
+                        transform: visible ? "translateY(0)" : "translateY(20vh)",
                         transitionDelay: `${i * 120}ms`,
                         fontFamily: "'Outfit', system-ui, sans-serif",
                         fontWeight: '800',

@@ -1,5 +1,4 @@
-
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import NavBar from './components/NavBar.component';
 import Home from './components/HomePage.component';
@@ -7,12 +6,13 @@ import About from './components/About.component';
 import Contact from './components/Contact.component';
 import NameAnimation from "./components/NameAnimation.component.jsx";
 import Portfolio from "./components/Portfolio.component.jsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <ThemeProvider>
-      <HashRouter>
-
+      <BrowserRouter basename="/portfolio-website">
+        <ScrollToTop />
         <div className='w-full flex flex-col justify-center items-center'>
           <NavBar />
           <Routes>
@@ -23,7 +23,7 @@ function App() {
           </Routes>
           <NameAnimation />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
