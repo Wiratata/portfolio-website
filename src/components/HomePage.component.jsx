@@ -171,10 +171,10 @@ const Home = () => {
         />
 
 
-        <div className="fixed left-0 bottom-20 md:bottom-40 w-full flex justify-center gap-3 md:gap-6 z-20 will-change-transform px-4">
+        <div className="fixed left-0 bottom-10 md:bottom-40 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 z-20 will-change-transform px-4">
 
           <div
-            className="w-[28vw] md:w-[22vw] lg:w-[22vw] h-[45vh] md:h-[65vh] will-change-transform rounded-xl overflow-hidden"
+            className="w-[92vw] md:w-[22vw] lg:w-[22vw] h-[26vh] md:h-[65vh] will-change-transform rounded-xl overflow-hidden"
             style={{
               transform: `translateY(${block1Offset}px)`,
               backgroundColor: colors.bg.secondary,
@@ -183,17 +183,17 @@ const Home = () => {
               boxShadow: `0 20px 60px -15px ${colors.bg.primary}40`
             }}
           >
-            <div className="h-full flex flex-col p-5 md:p-7">
+            <div className="h-full flex flex-col items-center md:items-start p-4 md:p-7">
 
               <div
-                className="w-10 h-10 md:w-14 md:h-14 rounded-xl mb-4 md:mb-6 flex items-center justify-center"
+                className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-xl mb-2 md:mb-6 flex items-center justify-center"
                 style={{
                   backgroundColor: `${colors.accent.primary}15`,
                   borderWidth: '1px',
                   borderColor: `${colors.accent.primary}30`
                 }}
               >
-                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke={colors.accent.primary} viewBox="0 0 24 24" strokeWidth={1.5}>
+                <svg className="w-5 h-5 md:w-8 md:h-8" fill="none" stroke={colors.accent.primary} viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -201,18 +201,18 @@ const Home = () => {
 
 
               <h3
-                className="text-sm md:text-xl lg:text-2xl font-bold mb-4 md:mb-6"
+                className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-6 text-center md:text-left"
                 style={{ color: colors.text.primary }}
               >
                 Motion Graphics
               </h3>
 
 
-              <div className="flex-1 space-y-2 md:space-y-3">
+              <div className="flex-1 flex flex-wrap md:flex-col gap-2 md:gap-3 items-center md:items-start justify-center md:justify-start overflow-hidden">
                 {['After Effects', 'Premiere Pro', 'Blender', 'Illustrator', 'Photoshop'].map((skill, i) => (
                   <div
                     key={i}
-                    className={`text-xs md:text-sm lg:text-base flex items-center gap-2 ${i >= 4 ? 'hidden md:flex' : 'flex'}`}
+                    className="text-[10px] md:text-sm lg:text-base flex items-center gap-1.5 md:gap-2 flex"
                     style={{ color: colors.text.secondary }}
                   >
                     <div
@@ -226,7 +226,7 @@ const Home = () => {
 
 
               <div
-                className="h-0.5 w-full mt-4"
+                className="h-0.5 w-full mt-2 md:mt-4"
                 style={{ backgroundColor: `${colors.accent.primary}20` }}
               />
             </div>
@@ -234,7 +234,7 @@ const Home = () => {
 
 
           <div
-            className="w-[28vw] md:w-[22vw] lg:w-[22vw] h-[45vh] md:h-[65vh] will-change-transform rounded-xl overflow-hidden"
+            className="w-[92vw] md:w-[22vw] lg:w-[22vw] h-[26vh] md:h-[65vh] will-change-transform rounded-xl overflow-hidden"
             style={{
               transform: `translateY(${block2Offset}px)`,
               backgroundColor: colors.bg.secondary,
@@ -243,32 +243,32 @@ const Home = () => {
               boxShadow: `0 20px 60px -15px ${colors.bg.primary}40`
             }}
           >
-            <div className="h-full flex flex-col p-5 md:p-7">
+            <div className="h-full flex flex-col items-center md:items-start p-4 md:p-7">
               <div
-                className="w-10 h-10 md:w-14 md:h-14 rounded-xl mb-4 md:mb-6 flex items-center justify-center transition-colors duration-500"
+                className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-xl mb-2 md:mb-6 flex items-center justify-center transition-colors duration-500"
                 style={{
                   backgroundColor: `${colors.accent.primary}15`,
                   borderWidth: '1px',
                   borderColor: `${colors.accent.primary}30`
                 }}
               >
-                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke={colors.accent.primary} viewBox="0 0 24 24" strokeWidth={1.5}>
+                <svg className="w-5 h-5 md:w-8 md:h-8" fill="none" stroke={colors.accent.primary} viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
 
               <h3
-                className="text-sm md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 transition-colors duration-500"
+                className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-6 text-center md:text-left transition-colors duration-500"
                 style={{ color: colors.text.primary }}
               >
                 Frontend Dev
               </h3>
 
-              <div className="flex-1 space-y-2 md:space-y-3">
-                {['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS', 'Framer Motion'].map((skill, i) => (
+              <div className="flex-1 flex flex-wrap md:flex-col gap-2 md:gap-3 items-center md:items-start justify-center md:justify-start overflow-hidden">
+                {['React', 'JavaScript', 'TypeScript', 'Tailwind', 'Motion', 'HTML/CSS'].map((skill, i) => (
                   <div
                     key={i}
-                    className={`text-xs md:text-sm lg:text-base flex items-center gap-2 transition-colors duration-500 ${i >= 4 ? 'hidden md:flex' : 'flex'}`}
+                    className="text-[10px] md:text-sm lg:text-base flex items-center gap-1.5 md:gap-2 flex transition-colors duration-500"
                     style={{ color: colors.text.secondary }}
                   >
                     <div
@@ -281,7 +281,7 @@ const Home = () => {
               </div>
 
               <div
-                className="h-0.5 w-full mt-4 transition-colors duration-500"
+                className="h-0.5 w-full mt-2 md:mt-4 transition-colors duration-500"
                 style={{ backgroundColor: `${colors.accent.primary}20` }}
               />
             </div>
@@ -289,7 +289,7 @@ const Home = () => {
 
 
           <div
-            className="w-[28vw] md:w-[22vw] lg:w-[22vw] h-[45vh] md:h-[65vh] will-change-transform rounded-xl overflow-hidden "
+            className="w-[92vw] md:w-[22vw] lg:w-[22vw] h-[26vh] md:h-[65vh] will-change-transform rounded-xl overflow-hidden "
             style={{
               transform: `translateY(${block3Offset}px)`,
               backgroundColor: colors.bg.secondary,
@@ -298,32 +298,32 @@ const Home = () => {
               boxShadow: `0 20px 60px -15px ${colors.bg.primary}40`
             }}
           >
-            <div className="h-full flex flex-col p-5 md:p-7">
+            <div className="h-full flex flex-col items-center md:items-start p-4 md:p-7">
               <div
-                className="w-10 h-10 md:w-14 md:h-14 rounded-xl mb-4 md:mb-6 flex items-center justify-center transition-colors duration-500"
+                className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-xl mb-2 md:mb-6 flex items-center justify-center transition-colors duration-500"
                 style={{
                   backgroundColor: `${colors.accent.primary}15`,
                   borderWidth: '1px',
                   borderColor: `${colors.accent.primary}30`
                 }}
               >
-                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke={colors.accent.primary} viewBox="0 0 24 24" strokeWidth={1.5}>
+                <svg className="w-5 h-5 md:w-8 md:h-8" fill="none" stroke={colors.accent.primary} viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                 </svg>
               </div>
 
               <h3
-                className="text-sm md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 transition-colors duration-500"
+                className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-6 text-center md:text-left transition-colors duration-500"
                 style={{ color: colors.text.primary }}
               >
                 Tools & Backend
               </h3>
 
-              <div className="flex-1 space-y-2 md:space-y-3">
-                {['Node.js', 'MongoDB', 'Git/GitHub', 'C# / C++', 'REST APIs', 'SQL'].map((skill, i) => (
+              <div className="flex-1 flex flex-wrap md:flex-col gap-2 md:gap-3 items-center md:items-start justify-center md:justify-start overflow-hidden">
+                {['Node.js', 'MongoDB', 'Git', 'SQL', 'APIs', 'C# / C++'].map((skill, i) => (
                   <div
                     key={i}
-                    className={`text-xs md:text-sm lg:text-base flex items-center gap-2 transition-colors duration-500 ${i >= 4 ? 'hidden md:flex' : 'flex'}`}
+                    className="text-[10px] md:text-sm lg:text-base flex items-center gap-1.5 md:gap-2 flex transition-colors duration-500"
                     style={{ color: colors.text.secondary }}
                   >
                     <div
@@ -336,12 +336,13 @@ const Home = () => {
               </div>
 
               <div
-                className="h-0.5 w-full mt-4 transition-colors duration-500"
+                className="h-0.5 w-full mt-2 md:mt-4 transition-colors duration-500"
                 style={{ backgroundColor: `${colors.accent.primary}20` }}
               />
             </div>
           </div>
         </div>
+
       </div>
 
       {/* --- SHOWREEL SECTION --- */}
@@ -388,10 +389,21 @@ const Home = () => {
         />
 
 
-        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-black/60 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none">
-          <h2 className="text-white text-4xl sm:text-6xl md:text-7xl font-black tracking-widest uppercase mb-2">Motion Graphics</h2>
-          <h2 className="text-white text-4xl sm:text-6xl md:text-7xl font-black tracking-widest uppercase">Showreel</h2>
-          <p className="text-white/80 text-lg sm:text-xl mt-4 font-light tracking-wide">2017 - 2024</p>
+        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-black/60 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none px-6 text-center">
+          <h2 
+            className="text-white font-black tracking-widest uppercase mb-1 sm:mb-2 leading-none"
+            style={{ fontSize: 'clamp(1.5rem, 8vw, 5rem)' }}
+          >
+            Motion Graphics
+          </h2>
+          <h2 
+            className="text-white font-black tracking-widest uppercase leading-none"
+            style={{ fontSize: 'clamp(1.5rem, 8vw, 5rem)' }}
+          >
+            Showreel
+          </h2>
+          <div className="w-12 sm:w-20 h-0.5 sm:h-1 bg-white/30 mt-4 sm:mt-6 mb-2 sm:mb-4" />
+          <p className="text-white/80 text-sm sm:text-lg md:text-xl font-light tracking-widest italic">2017 - 2024</p>
         </div>
       </div>
 

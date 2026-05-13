@@ -8,54 +8,64 @@ const About = () => {
 
     const experience = [
         {
-            title: "Motion Graphics Designer",
+            title: "Motion Graphic Designer",
+            company: "Maven Media Group",
+            period: "December 2025 – Present",
+            location: "Calgary, AB (Remote)",
+            type: "motion",
+            highlights: [
+                "Contract motion designer creating animated content and motion graphics",
+                "Collaborating with creative teams on client projects and branding materials",
+                "Developing motion graphics for diverse digital campaigns"
+            ]
+        },
+        {
+            title: "Volunteer Peer Technology Assistant",
+            company: "Bow Valley College",
+            period: "May 2025 – Present",
+            location: "Calgary, AB (On-site)",
+            type: "dev",
+            highlights: [
+                "Support students in building confidence with technology",
+                "Guiding peers through digital tools, platforms, and problem-solving strategies",
+                "Empowering students to overcome technical hurdles in their studies"
+            ]
+        },
+        {
+            title: "Founder / Business Director",
             company: "Sphoe Studio",
-            period: "October 2017 – 2024",
-            location: "Jakarta, ID",
+            period: "October 2017 – Present",
+            location: "Jakarta, Indonesia",
             type: "motion",
             highlights: [
                 "Founded and managed a boutique motion design studio",
-                "Led creative team and mentored junior designers",
-                "Delivered 100+ projects for international clients",
-                "Specialized in branding animations and explainer videos"
+                "Led a creative team to deliver 100+ projects for international clients",
+                "Developed high-impact branding animations and explainer videos",
+                "Released multiple award-worthy showreels showcasing studio expertise"
             ]
         },
         {
-            title: "Freelance Motion Graphics & VFX Designer",
+            title: "Freelance Motion Graphic Designer",
             company: "Self-Employed",
             period: "2013 – Present",
-            location: "Remote / Calgary, AB",
+            location: "Jakarta / Remote",
             type: "motion",
             highlights: [
-                "Animated 2D motion graphics for branding and social media",
-                "Managed client relationships and project timelines independently",
-                "Explained technical workflows to non-technical clients",
-                "Maintained 95%+ client satisfaction rate"
-            ]
-        },
-        {
-            title: "Software Development Student",
-            company: "Bow Valley College",
-            period: "January 2025 – Present",
-            location: "Calgary, AB",
-            type: "dev",
-            highlights: [
-                "Full-stack web development (MERN stack)",
-                "Object-oriented programming in C# and C++",
-                "Database design and REST API development",
-                "Deployed production applications on Render.com"
+                "Created custom motion graphics and visual effects for various industries",
+                "Partnered with clients to conceptualize and execute visually compelling animations",
+                "Consistently delivered high-quality projects under tight deadlines"
             ]
         },
         {
             title: "Video Editor",
             company: "OLIVER Agency",
             period: "May 2017 – September 2017",
-            location: "Jakarta, ID",
+            location: "Jakarta, Indonesia",
             type: "motion",
             highlights: [
-                "Edited promotional videos for major brands",
-                "Collaborated with creative directors and account teams",
-                "Maintained brand consistency across video deliverables"
+                "Edited and refined promotional videos for high-profile clients",
+                "Collaborated with creative teams to align content with brand guidelines",
+                "Delivered engaging video content tailored to specific target audiences"
             ]
         }
     ];
@@ -81,20 +91,23 @@ const About = () => {
 
     return (
         <div
-            className="w-screen min-h-screen pt-[20vh] pb-20 px-4 sm:px-8 transition-colors duration-500"
+            className="w-full min-h-screen pt-[15vh] sm:pt-[20vh] pb-20 px-4 sm:px-8 transition-colors duration-500 overflow-x-hidden"
             style={{ backgroundColor: colors.bg.primary }}
         >
-            <div className="max-w-6xl mx-auto relative z-10">
+            <div className="max-w-5xl mx-auto relative z-10">
 
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <h1
-                        className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 transition-colors duration-500"
-                        style={{ color: colors.text.primary }}
+                        className="font-bold mb-6 transition-colors duration-500 leading-tight"
+                        style={{ 
+                            color: colors.text.primary,
+                            fontSize: 'clamp(2.5rem, 10vw, 4.5rem)' 
+                        }}
                     >
                         About <span style={{ color: colors.accent.primary }}>Wiranata</span>
                     </h1>
                     <p
-                        className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed transition-colors duration-500"
+                        className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed transition-colors duration-500 px-2"
                         style={{ color: colors.text.secondary }}
                     >
                         Where <span className="font-semibold" style={{ color: colors.accent.primary }}>10+ years of motion design</span> meets <span className="font-semibold" style={{ color: colors.accent.secondary }}>full-stack development</span>
@@ -102,12 +115,12 @@ const About = () => {
                 </div>
 
 
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
                     {['story', 'experience', 'education'].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className="px-6 py-3 rounded-full font-semibold transition-all duration-300 capitalize"
+                            className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 capitalize"
                             style={{
                                 backgroundColor: activeTab === tab ? colors.accent.primary : colors.bg.tertiary,
                                 color: activeTab === tab ? colors.bg.primary : colors.text.secondary,
@@ -122,7 +135,7 @@ const About = () => {
 
 
                 <div
-                    className="rounded-2xl p-8 sm:p-12 transition-colors duration-500"
+                    className="rounded-2xl p-6 sm:p-10 md:p-12 transition-colors duration-500"
                     style={{
                         backgroundColor: colors.bg.secondary,
                         borderWidth: '1px',
@@ -156,41 +169,40 @@ const About = () => {
                                         Right now, I’m continuing to grow both as a motion designer and developer. I still love working in After Effects and editing videos, but I also enjoy building websites and learning technologies like React and Node.js. I like being able to understand both the creative and technical side of a project, and I’m always looking for ways to improve and learn something new.
                                     </p>
                                 </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                                <div
-                                    className="p-6 rounded-xl transition-colors duration-500"
-                                    style={{
-                                        backgroundColor: colors.bg.tertiary,
-                                        borderWidth: '1px',
-                                        borderColor: colors.border.light
-                                    }}
-                                >
-                                    <div className="text-4xl font-bold mb-2 transition-colors duration-500" style={{ color: colors.accent.primary }}>10+</div>
-                                    <div className="transition-colors duration-500" style={{ color: colors.text.secondary }}>Years in Motion Graphics</div>
-                                </div>
-                                <div
-                                    className="p-6 rounded-xl transition-colors duration-500"
-                                    style={{
-                                        backgroundColor: colors.bg.tertiary,
-                                        borderWidth: '1px',
-                                        borderColor: colors.border.light
-                                    }}
-                                >
-                                    <div className="text-4xl font-bold mb-2 transition-colors duration-500" style={{ color: colors.accent.primary }}>100+</div>
-                                    <div className="transition-colors duration-500" style={{ color: colors.text.secondary }}>Projects Delivered</div>
-                                </div>
-                                <div
-                                    className="p-6 rounded-xl transition-colors duration-500"
-                                    style={{
-                                        backgroundColor: colors.bg.tertiary,
-                                        borderWidth: '1px',
-                                        borderColor: colors.border.light
-                                    }}
-                                >
-                                    <div className="text-4xl font-bold mb-2 transition-colors duration-500" style={{ color: colors.accent.primary }}>2</div>
-                                    <div className="transition-colors duration-500" style={{ color: colors.text.secondary }}>Continents, Same Passion</div>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8">
+                                    <div
+                                        className="p-5 sm:p-6 rounded-xl transition-colors duration-500"
+                                        style={{
+                                            backgroundColor: colors.bg.tertiary,
+                                            borderWidth: '1px',
+                                            borderColor: colors.border.light
+                                        }}
+                                    >
+                                        <div className="text-3xl sm:text-4xl font-bold mb-1 sm:mb-2 transition-colors duration-500" style={{ color: colors.accent.primary }}>10+</div>
+                                        <div className="text-sm sm:text-base transition-colors duration-500" style={{ color: colors.text.secondary }}>Years in Motion Graphics</div>
+                                    </div>
+                                    <div
+                                        className="p-5 sm:p-6 rounded-xl transition-colors duration-500"
+                                        style={{
+                                            backgroundColor: colors.bg.tertiary,
+                                            borderWidth: '1px',
+                                            borderColor: colors.border.light
+                                        }}
+                                    >
+                                        <div className="text-3xl sm:text-4xl font-bold mb-1 sm:mb-2 transition-colors duration-500" style={{ color: colors.accent.primary }}>100+</div>
+                                        <div className="text-sm sm:text-base transition-colors duration-500" style={{ color: colors.text.secondary }}>Projects Delivered</div>
+                                    </div>
+                                    <div
+                                        className="p-5 sm:p-6 rounded-xl transition-colors duration-500"
+                                        style={{
+                                            backgroundColor: colors.bg.tertiary,
+                                            borderWidth: '1px',
+                                            borderColor: colors.border.light
+                                        }}
+                                    >
+                                        <div className="text-3xl sm:text-4xl font-bold mb-1 sm:mb-2 transition-colors duration-500" style={{ color: colors.accent.primary }}>2</div>
+                                        <div className="text-sm sm:text-base transition-colors duration-500" style={{ color: colors.text.secondary }}>Continents, Same Passion</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -245,14 +257,14 @@ const About = () => {
                                         borderColor: colors.border.light
                                     }}
                                 >
-                                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                    <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-2 sm:gap-4 mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold transition-colors duration-500" style={{ color: colors.text.primary }}>{job.title}</h3>
+                                            <h3 className="text-lg sm:text-xl font-bold transition-colors duration-500" style={{ color: colors.text.primary }}>{job.title}</h3>
                                             <p className="font-semibold transition-colors duration-500" style={{ color: colors.accent.primary }}>{job.company}</p>
                                         </div>
-                                        <div className="text-right">
-                                            <p className="text-sm transition-colors duration-500" style={{ color: colors.text.secondary }}>{job.period}</p>
-                                            <p className="text-sm transition-colors duration-500" style={{ color: colors.text.tertiary }}>{job.location}</p>
+                                        <div className="sm:text-right">
+                                            <p className="text-xs sm:text-sm transition-colors duration-500" style={{ color: colors.text.secondary }}>{job.period}</p>
+                                            <p className="text-xs sm:text-sm transition-colors duration-500" style={{ color: colors.text.tertiary }}>{job.location}</p>
                                         </div>
                                     </div>
                                     <ul className="space-y-2">
