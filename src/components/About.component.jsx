@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 const About = () => {
     const [activeTab, setActiveTab] = useState('story');
     const { colors } = useTheme();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [activeTab]);
 
     const experience = [
         {
@@ -91,7 +95,7 @@ const About = () => {
 
     return (
         <div
-            className="w-full min-h-screen pt-[15vh] sm:pt-[20vh] pb-20 px-4 sm:px-8 transition-colors duration-500 overflow-x-hidden"
+            className="w-full min-h-screen pt-[15vh] sm:pt-[20vh] pb-20 px-4 sm:px-8 transition-colors duration-500"
             style={{ backgroundColor: colors.bg.primary }}
         >
             <div className="max-w-5xl mx-auto relative z-10">
@@ -115,22 +119,42 @@ const About = () => {
                 </div>
 
 
-                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
-                    {['story', 'experience', 'education'].map((tab) => (
-                        <button
-                            key={tab}
-                            onClick={() => setActiveTab(tab)}
-                            className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 capitalize"
+                <div 
+                    className="sticky top-20 md:top-24 z-30 w-full flex justify-center py-2 mb-10 pointer-events-none"
+                >
+                    <div
+                        className="relative p-1 rounded-full flex items-center cursor-pointer transition-colors duration-500 pointer-events-auto shadow-lg w-[90%] max-w-[400px] sm:max-w-none sm:w-auto sm:min-w-[480px]"
+                        style={{
+                            backgroundColor: `${colors.bg.tertiary}dd`,
+                            border: `1px solid ${colors.border.light}`,
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)'
+                        }}
+                    >
+                        {/* Sliding Background Indicator */}
+                        <div
+                            className="absolute top-1 bottom-1 rounded-full transition-all duration-300 ease-out shadow-sm"
                             style={{
-                                backgroundColor: activeTab === tab ? colors.accent.primary : colors.bg.tertiary,
-                                color: activeTab === tab ? colors.bg.primary : colors.text.secondary,
-                                borderWidth: '1px',
-                                borderColor: activeTab === tab ? colors.accent.primary : colors.border.light
+                                left: '4px',
+                                width: 'calc((100% - 8px) / 3)',
+                                transform: `translateX(${activeTab === 'story' ? '0' : activeTab === 'experience' ? '100%' : '200%'})`,
+                                backgroundColor: colors.bg.secondary
                             }}
-                        >
-                            {tab}
-                        </button>
-                    ))}
+                        />
+
+                        {['story', 'experience', 'education'].map((tab) => (
+                            <button
+                                key={tab}
+                                onClick={() => setActiveTab(tab)}
+                                className="relative z-10 flex-1 px-1 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-base font-bold transition-colors duration-300 capitalize text-center"
+                                style={{
+                                    color: activeTab === tab ? colors.accent.primary : colors.text.secondary
+                                }}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
 

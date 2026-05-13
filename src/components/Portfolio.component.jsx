@@ -9,8 +9,9 @@ const Portfolio = () => {
 
     const { repos, loading, error } = useGitHubRepos('wiratata');
 
-
-
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [activeTab]);
 
     const motionProjects = [
         {
@@ -181,21 +182,25 @@ const Portfolio = () => {
             style={{ backgroundColor: colors.bg.primary }}
         >
             <div className="max-w-7xl mx-auto">
-
-                <div className="flex flex-col items-center mb-16">
+                <div className="flex flex-col items-center mb-8 sm:mb-12">
                     <h1
-                        className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 text-center transition-colors duration-500"
+                        className="text-4xl sm:text-5xl md:text-7xl font-bold text-center transition-colors duration-500"
                         style={{ color: colors.text.primary }}
                     >
                         Portfolio
                     </h1>
+                </div>
 
-
+                <div 
+                    className="sticky top-20 md:top-24 z-30 w-full flex justify-center py-2 mb-10 pointer-events-none"
+                >
                     <div
-                        className="relative p-1 rounded-full flex items-center cursor-pointer transition-colors duration-500"
+                        className="relative p-1 rounded-full flex items-center cursor-pointer transition-colors duration-500 pointer-events-auto shadow-lg"
                         style={{
-                            backgroundColor: colors.bg.tertiary,
-                            border: `1px solid ${colors.border.light}`
+                            backgroundColor: `${colors.bg.tertiary}dd`,
+                            border: `1px solid ${colors.border.light}`,
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)'
                         }}
                     >
 

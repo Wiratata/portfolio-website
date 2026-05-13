@@ -60,9 +60,9 @@ const NavBar = () => {
     return (
         <>
             <nav
-                className={`fixed z-[60] transition-all duration-500 flex items-center justify-between px-8 sm:px-12 ${scrolled
-                    ? "top-4 w-[98%] sm:w-[95%] left-1/2 -translate-x-1/2 rounded-full h-16 shadow-lg border"
-                    : "top-0 w-full left-0 h-20 sm:h-24 border-b"
+                className={`fixed z-[60] transition-all duration-500 flex items-center justify-between px-8 sm:px-12 left-1/2 -translate-x-1/2 ${scrolled
+                    ? "top-4 w-[98%] sm:w-[95%] rounded-full h-16 shadow-lg border"
+                    : "top-0 w-full rounded-none h-20 sm:h-24 border-b"
                     }`}
                 style={{
                     backgroundColor: scrolled
