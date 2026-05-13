@@ -11,7 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/portfolio-website">
+      <BrowserRouter>
         <ScrollToTop />
         <div className='w-full flex flex-col justify-center items-center'>
           <NavBar />
