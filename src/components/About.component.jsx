@@ -329,7 +329,7 @@ const About = () => {
                                     <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
                                         <div>
                                             <h3 className="text-xl font-bold transition-colors duration-500" style={{ color: colors.text.primary }}>{edu.degree}</h3>
-                                            <p className="transition-colors duration-500" style={{ color: colors.text.secondary }}>{edu.school}</p>
+                                            <p className="font-semibold transition-colors duration-500" style={{ color: colors.accent.primary }}>{edu.school}</p>
                                             <p className="text-sm transition-colors duration-500" style={{ color: colors.text.tertiary }}>{edu.location}</p>
                                         </div>
                                         <div className="text-right">
